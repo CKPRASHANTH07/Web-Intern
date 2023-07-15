@@ -26,16 +26,16 @@ export default function Navbar(){
         </button>
         </Link>
         <Link to="/Industries">
-        <button className="px-3 py-2 font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500 rounded-xl">Industries</button>
+        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Industries</button>
         </Link>
         <Link to="/ClientPortfolio">
-        <button className="px-3 py-2 font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500 rounded-xl">Client Portfolio</button>
+        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Client Portfolio</button>
         </Link>
         <Link to="/Aboutus">
-        <button className="px-3 py-2 font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500 rounded-xl">About-us</button>
+        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">About-us</button>
         </Link>
         <Link to="/Contactus">
-        <button className="px-3 py-2 font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500 rounded-xl">Contact-us</button>
+        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Contact-us</button>
         </Link>
         </div>
 
