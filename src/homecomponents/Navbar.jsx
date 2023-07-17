@@ -39,7 +39,7 @@ export default function Navbar(){
         </Link>
         </div>
 
-      <div className={`${Shownavbar?'block':'hidden'} flex flex-col absolute lg:top-20 xl:top-36 lg:left-[20%] xl:left-[49%] rounded-lg p-2 space-y-6`}>
+      <div className={`${Shownavbar?'block':'hidden'} flex flex-col  lg:top-20 xl:top-36 lg:left-[20%] xl:left-[49%] rounded-lg p-2 space-y-6`}>
       <div className='px-3 py-2 rounded-md'>
        <FontAwesomeIcon icon={faQrcode} size='xl' /> 
       </div>

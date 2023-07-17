@@ -8,7 +8,7 @@ export default function Timeline() {
     </div>
     <div className="container w-full h-full mx-auto my-10">
   <div className="relative h-full p-10 overflow-hidden wrap">
-    <div className="absolute h-full border border-gray-700 border-2-2 border-opacity-20" style={{left:"50%"}}></div>
+    <div className="absolute h-full border-2 border-opacity-100 border-violet-300" style={{left:"50%"}}></div>
 
     
     <div className="flex items-center justify-between w-full mb-8 right-timeline">
