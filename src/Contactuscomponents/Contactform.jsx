@@ -39,7 +39,7 @@ export default function Contactform() {
     // " 54.173.211.48"
     console.log('ok');
     console.log(CompanyName, ApplicationName, Email, ProductName, Quantity, CountryCode, PhoneNumber, Message);
-    const response = await fetch('http://54.173.211.48:8080//enquiry_form',{
+    const response = await fetch('http://52.91.25.193:8080/enquiry_form',{
       method : "POST",
       headers : {'Content-Type': 'application/json'},
       body : JSON.stringify({ CompanyName, ApplicationName, Email, ProductName, Quantity, CountryCode, PhoneNumber, Message})
