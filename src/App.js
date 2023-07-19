@@ -6,6 +6,7 @@ import Industries from "./Industries";
 import Aboutus from "./Aboutus";
 import Clientportfolio from "./Clientportfolio";
 import Contactus from "./Contactus";
+import Admin from "./Admin";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/ClientPortfolio" element={<Clientportfolio/>}/>
          <Route path="/Aboutus" element={<Aboutus/>}/>
          <Route path="/Contactus" element={<Contactus/>}/>
+         <Route path="/Admin" element={<Admin />}/>
         </Routes>
         </Router>
   );
