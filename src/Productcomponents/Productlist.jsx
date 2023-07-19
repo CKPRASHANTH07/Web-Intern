@@ -93,9 +93,6 @@ export default function Productlist() {
            <h1 className='font-bold text-white font-Inter'>More info</h1>
          </div>
          </button>
-         {showComparison && (
-          <ComparisonPopup products={selectedProducts} closePopup={() => setShowComparison(false)} />
-        )}
          </div>
          </div>))}
       </div>
@@ -105,21 +102,4 @@ export default function Productlist() {
   )
 }
 
-function ComparisonPopup({ products, closePopup }) {
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75">
-      <div className="p-8 bg-white rounded-lg">
-        <h1 className="mb-4 text-xl font-semibold">Selected Products for Comparison:</h1>
-        <ul>
-          {products.map((product, index) => (
-            <li key={index}>{product.name}</li>
-          ))}
-        </ul>
-        <button onClick={closePopup} className="px-4 py-2 mt-4 text-white rounded-md bg-violet-500">
-          Close
-        </button>
-      </div>
-    </div>
-  );
-}
 
