@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import img1 from '../images/person1.png';
-import img2 from '../images/person2.png';
-import img3 from '../images/person3.png';
+import img1 from '../images/Adithya.png';
+import img2 from '../images/Shoppers_Stop_Logo.png';
+import img3 from '../images/dmart.png';
+import img4 from '../images/ginijony.jpeg'
+import {BiSolidLeftArrow} from 'react-icons/bi'
+import {BiSolidRightArrow} from 'react-icons/bi';
 
 export default function OurClients() {
   const [activeCard, setActiveCard] = useState(0);
   const cards = [
-    { image: img1, partnered: '9', companyname: 'Card 1', description: 'This is the first card.' },
-    { image: img2, partnered: '8', companyname: 'Card 2', description: 'This is the second card.' },
-    { image: img3, partnered: '7', companyname: 'Card 3', description: 'This is the third card.' },
-    { image: img3, partnered: '6', companyname: 'Card 4', description: 'This is the fourth card.' },
+    { image: img1, partnered: '9', companyname: 'Adithya Birla', description: 'Our Partnership with Birla Company has been a game-changer for our business. We are thrilled to have formed a strong bond.' },
+    { image: img2, partnered: '8', companyname: 'Shoppers stop', description: 'The partnership has opened up new avenues of growth and opportunity for us.' },
+    { image: img3, partnered: '7', companyname: 'D mart', description: 'The synergy between our companies is remarkable. We have found common ground in our shared values.' },
+    { image: img4, partnered: '6', companyname: 'Gini and jhony', description: 'Through this partnership, we have been able to combine our technological prowess with Companys manufacturing capabilities' },
   ];
 
   const numberOfVisibleCards = 3; // Number of cards to display at a time
-  const autoplayInterval = 10000; // Autoplay interval in milliseconds
+  const autoplayInterval =2800; // Autoplay interval in milliseconds
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -43,34 +46,38 @@ export default function OurClients() {
 
   return (
     <div className='relative'>
-      <div className='flex flex-col gap-y-7 mt-10'>
+      <div className='flex flex-col mt-10 gap-y-7'>
         {/* heading */}
-        <div className='text-center'>
-          <h1 className='lg:text-3xl xl:text-5xl font-bold'>Our clients</h1>
-        </div>
+         <div className='text-center'>
+          <h1 className='font-bold lg:text-2xl xl:text-3xl'>Our Clients</h1>
+         </div>
 
         {/* row sliding */}
-        <div className='flex flex-row justify-center gap-x-20'>
-          <button className='' onClick={prevCard}>{'<'}</button>
-          {visibleCards.map((card, index) => (
-            <div
-              key={index}
-              className='flex flex-col px-5 py-5 lg:w-[35%] xl:w-[30%] rounded-lg shadow-lg border-2 border-black'
-            >
-              {/* Images logo */}
-              <div className='h-10 w-10'>
-                <img src={card.image} alt='' />
+        <div className='flex flex-row justify-center mx-28'>
+          <button className='' onClick={prevCard}><BiSolidLeftArrow size='1.5em' /></button>
+          {visibleCards.map((card, index) => {
+            const isCenterCard = index === 1; // Check if the card is the center card
+            const cardClass = isCenterCard
+              ? 'flex flex-col px-8 py-8 lg:w-[35%] xl:w-[30%] rounded-lg shadow-xl border-2 border-black'
+              : 'flex flex-col px-8 py-8 lg:w-[35%] xl:w-[30%] rounded-lg shadow-xl border-2 border-black transform scale-[0.7] translate-y-3';
+
+            return (
+              <div key={index} className={cardClass}>
+                {/* Images logo */}
+                <div className='flex justify-center w-20 px-5 py-5 h-14'>
+                  <img src={card.image} alt='' />
+                </div>
+                <div className='flex justify-start mt-5'>
+                  <h2 className='text-xl font-extrabold text-violet-500 font-Poppins'>{card.companyname}</h2>
+                </div>
+                <h1 className='font-bold text-gray-400 font-Inter'>Partnered over {card.partnered} + years</h1>
+                <div className='mt-5'>
+                  <p className='font-bold font-Inter'>{card.description}</p>
+                </div>
               </div>
-              <div className='mt-5 flex flex-row justify-between'>
-                <h2 className='font-Poppins font-bold'>{card.companyname}</h2>
-                <h1 className='font-Inter font-bold text-gray-400'>Partnered over {card.partnered} + years</h1>
-              </div>
-              <div className='mt-2'>
-                <p className='font-Inter font-bold'>{card.description}</p>
-              </div>
-            </div>
-          ))}
-          <button className='' onClick={nextCard}>{'>'}</button>
+            );
+          })}
+          <button className='' onClick={nextCard}><BiSolidRightArrow size="1.5em" /></button>
         </div>
       </div>
     </div>

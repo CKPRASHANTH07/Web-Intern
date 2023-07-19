@@ -14,21 +14,21 @@ export default function Productfilter() {
 
 
   return (
-    <div className='relative w-80 h-auto border-2 rounded-lg px-1 py-5 mb-5'>
-     <div className="flex flex-col mt-4 px-2 gap-y-2">
+    <div className='relative h-auto px-1 py-5 mb-5 border-2 rounded-lg w-80'>
+     <div className="flex flex-col px-2 mt-4 gap-y-2">
          
-       <label className="font-Inter font-bold">
+       <label className="font-bold font-Inter">
        Category
        </label>
           <select
            id="category"
            value={selectedCategory}
            onChange={handleCategoryChange}
-           className="border rounded px-2 py-1"
+           className="px-2 py-1 my-5 font-bold border rounded font-Inter"
           >
-           <option value="" className="font-Inter font-semibold">None</option>
+           <option value="" className="font-semibold font-Inter">None</option>
            {categories.map((category, index) => (
-             <option key={index} value={category}>
+             <option key={index} value={category} className="my-10 font-semibold font-Inter">
                {category}
              </option>
            ))}

@@ -3,6 +3,7 @@ import Navbar from './homecomponents/Navbar'
 import Producthero from './Productcomponents/Producthero'
 import Productfilter from './Productcomponents/Productfilter'
 import Productlist from './Productcomponents/Productlist'
+import Footer from './homecomponents/footer'
 
 export default function Productindi() {
   return (
@@ -14,6 +15,7 @@ export default function Productindi() {
       <Productfilter/>
       <Productlist/>
       </div>
+      <Footer/>
       </div>
     </div>
   )

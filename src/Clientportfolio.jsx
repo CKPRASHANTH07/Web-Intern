@@ -10,7 +10,9 @@ export default function Clientportfolio() {
       <Navbar/>
       <Ourclientss />
       <Oursuppliers />
+      <div className='mt-10'>
       <Footer />
+      </div>
     </div>
   )
 }
