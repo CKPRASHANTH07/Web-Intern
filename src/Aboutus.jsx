@@ -6,7 +6,6 @@ import Timeline from './Aboutuscomponents/Timeline'
 import Whyus from './Aboutuscomponents/Whyus'
 import Potentials from './Aboutuscomponents/Potentials'
 import Ourteam from './Aboutuscomponents/Ourteam'
-import { Link } from 'react-router-dom'
 
 
 export default function Aboutus() {

@@ -1,7 +1,5 @@
 import React from 'react'
 import label from '../images/labels.png'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect,useRef} from 'react'
 
 
@@ -9,18 +7,6 @@ export default function Products(){
 
    const scrl=useRef(null);
    useEffect(()=>{
-      const scrl1=scrl.current;
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.from(scrl1, {   
-         opacity: 0,
-         duration: 1,
-         scrollTrigger: {
-           trigger: scrl1,
-           start: 'top 80%',
-           end: 'bottom 80%',
-           scrub: true,
-         },
-       });
 
    },[]);
 
@@ -28,7 +14,7 @@ export default function Products(){
         
 <div  className='relative' ref={scrl}>
 <div className='flex justify-center'>
-<h1 className='font-Poppins lg:text-4xl xl:text-5xl underline underline-offset-8 decoration-4 decoration-violet-500'>Products</h1>
+<h1 className='underline font-Poppins lg:text-4xl xl:text-5xl underline-offset-8 decoration-4 decoration-violet-500'>Products</h1>
 </div>
 {/* one product text and image div*/}
 <div className='flex justify-around mt-20'>
