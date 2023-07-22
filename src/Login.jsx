@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-
+import logo from './images/logo.png'
+import login from './images/login.png'
 
 
 export default function Login() {
@@ -11,14 +12,26 @@ export default function Login() {
 
 
   return (
-    <div className='relative px-20 py-20'>
+    <div className='relative px-20 py-5'>
+
+    <header>
+    <img className="max-w-[15%] mx-auto mb-5" src={logo} alt='' />
+  </header>
+     
+    <div className='flex flex-row justify-around mt-10'>
+
+      <div className=''>
+       <img className='shadow-lg rounded-xl' src={login} alt='' />
+      </div>
+
+    <div className=''>
        <div className='flex justify-center'>
          <h1 className='font-bold text-transparent underline bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text lg:text-2xl xl:text-3xl font-Poppins underline-offset-8 decoration-violet-500 decoration-4'>Login</h1>
        </div>
-       <div className='flex justify-center w-auto'>
-       <div className='flex flex-row justify-center p-2 mt-5 w-[30%]'>
+       <div className='flex justify-center'>
+       <div className='flex flex-row justify-center p-2 mt-5'>
         <form className='flex flex-col w-full gap-y-5'>
-        <label className="mt-5 font-bold font-Inter sm:text-base lg:text-xl xl:text-2xl">E-mail Id</label>
+        <label className="block mt-5 font-bold font-Inter sm:text-base lg:text-xl xl:text-2xl">E-mail Id</label>
         <input
           required
           placeholder="Email"
@@ -48,6 +61,8 @@ export default function Login() {
         </form>
       </div>
       </div>
+      </div>
+    </div>
     </div>
   )
 }
