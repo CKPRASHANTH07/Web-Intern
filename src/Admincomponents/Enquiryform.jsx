@@ -3,14 +3,13 @@ import React,{useEffect,useState} from 'react'
 export default function Enquiryform() {
 
     const [data, setData] = useState([]);
-
     useEffect(() => {
       // Function to fetch data from the server
       const fetchData = async () => {
         try {
-          const response = await fetch('your_server_endpoint');
+          const response = await fetch('http://52.23.177.30:8080/enquiry_form');
           const jsonData = await response.json();
-          setData(jsonData); // Assuming data is an array of objects
+          setData(jsonData.queries); // Assuming data is an array of objects
         } catch (error) {
           console.error('Error fetching data:', error);
         }
@@ -39,9 +38,11 @@ export default function Enquiryform() {
       </thead>
       <tbody>
         {data.map((item) => (
-          <tr key={item.id}>
-            <td className="px-4 py-2">{item.column1Data}</td>
-            <td className="px-4 py-2">{item.column2Data}</td>
+          <tr key={item.query_no}>
+            <td className='px-4 py-2'>{item.query_no}</td>
+            <td className="px-4 py-2">{item.Company_Name}</td>
+            <td className="px-4 py-2">{item.query_time}</td>
+            <td className='px-4 py-2'>{item.status}</td>
           </tr>
         ))}
       </tbody>

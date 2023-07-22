@@ -30,7 +30,7 @@ export default function Testimonials() {
       <div className='flex flex-row justify-center space-x-36'>
         {count.map((value, index) => (
             <div className='flex flex-col space-y-10'>
-             <div className='flex justify-center'>
+             <div className='flex justify-center '>
              <div key={index} className='px-1 py-10 rounded-full bg-violet-500 w-fit'>
               <div className='text-center w-28'>
               <p className='text-2xl text-white font-Poppins'>{value}+</p>

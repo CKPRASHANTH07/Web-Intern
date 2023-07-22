@@ -9,7 +9,7 @@ export default function Testimonial1() {
   return (
     <div className='relative my-32 mx-28'>
       <div className='flex flex-row justify-center space-x-20'>
-       <div className='flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
+       <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
         <div className='flex justify-center h-16 overflow-hidden rounded-full'>
           <img src={person1} alt='' />
         </div> 
@@ -27,7 +27,7 @@ export default function Testimonial1() {
         </div>
         </div>
        </div>
-       <div className='flex flex-col h-auto p-5 border-2 border-black shadow-lg shadow-violet-500 rounded-xl w-fit'>
+       <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col h-auto p-5 border-2 border-black shadow-lg shadow-violet-500 rounded-xl w-fit'>
        <div className='flex justify-center overflow-hidden rounded-full'>
          <img src={person2} alt='' />
        </div> 
@@ -45,7 +45,7 @@ export default function Testimonial1() {
        </div>
        </div>
       </div>
-      <div className='flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
+      <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
         <div className='flex justify-center h-16 overflow-hidden rounded-full'>
           <img src={person3} alt='' />
         </div> 

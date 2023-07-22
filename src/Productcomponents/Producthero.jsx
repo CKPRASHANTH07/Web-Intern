@@ -36,7 +36,7 @@ export default function Producthero() {
       </div>
       </div>
       <div className='overflow-hidden bg-yellow-300 rounded-l-full max-w-max'>
-       <img className='w-auto h-96' src={prdimg} alt=''></img>
+       <img className='w-auto h-96' src={prdimg} alt=''/>
       </div>
       </div>
     </div>
