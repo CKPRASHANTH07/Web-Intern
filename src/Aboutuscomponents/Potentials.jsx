@@ -3,6 +3,7 @@ import pot1 from '../images/pot1.png'
 import pot2 from '../images/pot2.png'
 import pot3 from '../images/pot3.png'
 import pot4 from '../images/pot4.png'
+import { Link } from 'react-router-dom'
 
 export default function Potentials() {
 
@@ -62,6 +63,12 @@ export default function Potentials() {
         </div>
     ))}
     </div>
+
+    <Link to='/Login'>
+    <button className='px-2 py-2 text-white rounded-lg bg-violet-500'>
+    <h1>Login</h1>
+    </button>
+    </Link>
     </div>
   )
 }
