@@ -76,7 +76,12 @@ export default function Roundedstats() {
         responsive:true,
         cutout:'80%',
         layout:{
-          padding:20,
+          padding:{
+            left:40,
+            right:40,
+            top:20,
+            bottom:5,
+          }
         },
         borderWidth:5,
         borderJoinStyle:'round',
@@ -107,7 +112,12 @@ export default function Roundedstats() {
 
 
   return (
-    <div className='relative mt-10 mx-36'>
+    <div className='relative mt-10 mx-44'>
+
+
+        <div className='pt-5 text-center lg:text-3xl xl:text-5xl font-Poppins'>
+          <h1 className='text-transparent bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text'> Welcome Admin !  </h1>
+        </div>
 
      <div className='flex justify-start mx-2 my-7'>
       <h1 className='text-2xl font-bold font-Poppins'>Stats</h1>
@@ -115,7 +125,7 @@ export default function Roundedstats() {
      <div className='flex flex-col justify-center w-fit'>
       <div className='flex flex-row justify-center px-5 rounded-lg w-fit gap-x-8'>
       {/* Stat 1 */}
-       <div className='flex flex-col px-2 pb-2 overflow-hidden border-2 border-black rounded-lg shadow-lg shadow-slate-400 gap-y-4'>
+       <div className='flex flex-col px-2 pb-10 overflow-hidden border-2 border-black rounded-lg shadow-lg shadow-slate-400 gap-y-4'>
         <Doughnut data={data} options={options} plugins={[myPlugin]} />
         <h1 className='text-xl font-extrabold text-center font-Inter'>No of Visitors</h1>
        </div>

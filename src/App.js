@@ -21,6 +21,7 @@ import Safetylabels from "./Industriescomponents/Safetylabels";
 import Customlabels from "./Industriescomponents/Customlabels";
 import Compliancelabel from "./Industriescomponents/Compliancelabel";
 import Login from "./Login";
+import Sales from "./Sales";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
          <Route path="/Contactus" element={<Contactus/>}/>
          <Route path="/Admin" element={<Admin />}/>
          <Route path='/Login' element={<Login/>} />
+         <Route path='/Sales' element={<Sales/>} />
          <Route path='/Industries/Shipping' element={<Shippingandlogisticslabels />}/>
          <Route path='/Industries/Inventory' element={<Inventorylabels/>}/>
          <Route path='/Industries/Product' element={<Productlabels/>}/>

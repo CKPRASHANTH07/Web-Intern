@@ -20,14 +20,14 @@ export default function Enquiryform() {
 
 
   return (
-    <div className='relative mt-16 mx-36'>
+    <div className='relative mt-16 mx-44'>
 
     <div className='flex justify-start mx-2 my-7'>
     <h1 className='text-2xl font-bold font-Poppins'>Enquiries</h1>
    </div>
 
 
-    <table className="w-auto border border-black border-dashed divide-y-2 divide-gray-900 table-fixed">
+    <table className="w-full ml-5 border-2 border-black divide-y-2 divide-gray-900 table-fixed">
       <thead>
         <tr className=''>
           <th className="px-4 py-2 w-[5%]">S.NO</th>
