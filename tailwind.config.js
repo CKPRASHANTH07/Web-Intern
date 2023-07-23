@@ -30,6 +30,10 @@ module.exports = {
         "opensans":['Open Sans','sans-serif'],
         'firasans':['Fira Sans','sans-serif']
        },
+
+       boxShadow:{
+        'hero':'	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1)'
+       }
     },
   },
   plugins: [],

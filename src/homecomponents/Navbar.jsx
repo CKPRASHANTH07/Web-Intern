@@ -20,9 +20,6 @@ export default function Navbar(){
         <Link to="/Products">
         <button className="flex flex-row font-extrabold place-items-center font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500" onClick={()=>setnavbar(!Shownavbar)}>
         <p className='font-extrabold font-Inter'>Products</p>
-          <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-         </svg>
         </button>
         </Link>
         <Link to="/Industries">
@@ -38,9 +35,9 @@ export default function Navbar(){
         <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Contact-us</button>
         </Link>
         </div>
-
-      <div className={`${Shownavbar?'block':'hidden'} flex flex-col  lg:top-20 xl:top-36 lg:left-[20%] xl:left-[49%] rounded-lg p-2 space-y-6`}>
-      <div className='px-3 py-2 rounded-md'>
+   {/*
+         <div className={`${Shownavbar?'block':'hidden'} flex flex-col  lg:top-20 xl:top-36 lg:left-[20%] xl:left-[49%] rounded-lg p-2 space-y-6`}>
+        <div className='px-3 py-2 rounded-md'>
        <FontAwesomeIcon icon={faQrcode} size='xl' /> 
       </div>
       <div className='px-3 py-2 rounded-md'>
@@ -49,7 +46,7 @@ export default function Navbar(){
       <div className='px-3 py-2 rounded-md'>
       <FontAwesomeIcon  icon={faPaintRoller} size='xl'/>
       </div>
-        </div>
+    </div> */}
       </div>
     )
 }

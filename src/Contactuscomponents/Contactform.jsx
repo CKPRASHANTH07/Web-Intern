@@ -56,8 +56,8 @@ export default function Contactform() {
   return (
     <div className='relative'>
     <div className='flex justify-around mx-10'>
-    <div className='mx-32'>
-      <div className="mx-auto mt-20 text-center max-w-2x">
+    <div className='mx-20'>
+      <div className="mx-auto mt-10 text-center max-w-2x">
         <h1 className="text-xl text-transparent underline underline-offset-8 decoration-violet-500 decoration-4 font-Poppins bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text sm:text-4xl">Contact sales</h1>
       </div>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-14">
@@ -74,7 +74,7 @@ export default function Contactform() {
               name="company"
               id="company"
               autoComplete="organization"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="font-Inter font-semibold w-full rounded-md px-3.5 py-2 text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
               required
             />
           </div>
@@ -91,7 +91,7 @@ export default function Contactform() {
               name="company"
               id="company"
               autoComplete="organization"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="font-Inter font-semibold w-full rounded-md px-3.5 py-2 text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
               required
             />
           </div>
@@ -108,7 +108,7 @@ export default function Contactform() {
               name="email"
               id="email"
               autoComplete="email"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="font-Inter font-semibold w-full rounded-md border-2 border-gray-300 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
               required
             />
           </div>
@@ -125,7 +125,7 @@ export default function Contactform() {
             name="first-name"
             id="first-name"
             autoComplete="given-name"
-            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="font-Inter font-semibold w-full rounded-md border-2 border-gray-300 px-3.5 py-2 text-gray-900 placeholder:text-gray-400  sm:text-sm sm:leading-6"
             required
           />
         </div>
@@ -143,7 +143,7 @@ export default function Contactform() {
             placeholder=''
             id="last-name"
             autoComplete="family-name"
-            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="font-Inter font-semibold w-full rounded-md border-2 border-gray-300 px-3.5 py-2 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6"
             required
           />
         </div>
@@ -162,7 +162,7 @@ export default function Contactform() {
                 onChange={(e)=>setCountryCode(e.target.value)}
                 id="country"
                 name="country"
-                className="h-full px-2 py-0 border-2 rounded-md focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                className="h-full px-2 py-0 border-2 border-gray-300 rounded-md sm:text-sm"
                 required
               >
                 <option className='font-bold font-Poppins'>US</option>
@@ -182,7 +182,7 @@ export default function Contactform() {
               name="phone-number"
               id="phone-number"
               autoComplete="tel"
-              className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 font-Inter font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className=" w-full rounded-md border-2 border-gray-300 px-3.5 py-2 pl-20 font-Inter font-semibold text-gray-900  sm:text-sm sm:leading-6"
               required
             />
           </div>
@@ -198,7 +198,7 @@ export default function Contactform() {
               name="message"
               id="message"
               rows={4}
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="font-Inter font-semibold w-full rounded-md border-2 border-gray-300 px-3.5 py-2 text-gray-900 placeholder:text-gray-400  sm:text-sm sm:leading-6"
               defaultValue={''}
               required
             />
