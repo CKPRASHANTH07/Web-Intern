@@ -37,7 +37,7 @@ export default function Potentials() {
   return (
     <div className='relative mx-20 my-20'>
         <div className='flex justify-start mb-20'>
-            <h1 className='font-Poppins lg:text-2xl xl:text-5xl'>Our Potential Infrastructure</h1>
+            <h1 className='font-Poppins lg:text-2xl xl:text-5xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our Potential Infrastructure</h1>
         </div>
        
     {/*details*/}

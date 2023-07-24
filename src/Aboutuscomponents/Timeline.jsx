@@ -4,7 +4,7 @@ export default function Timeline() {
   return (
     <div  className='relative'>
     <div className='flex justify-center'>
-    <h1 className='font-semibold lg:text-3xl xl:text-5xl font-Poppins'>What have we come across !</h1>
+    <h1 className='font-semibold lg:text-3xl xl:text-5xl font-Poppins underline underline-offset-8 decoration-4 decoration-violet-500'>What have we come across !</h1>
     </div>
     <div className="container w-full h-full mx-auto my-10">
   <div className="relative h-full p-10 overflow-hidden wrap">

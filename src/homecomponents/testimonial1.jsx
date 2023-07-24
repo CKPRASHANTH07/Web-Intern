@@ -1,13 +1,31 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import person1 from '../images/person1.png'
 import person2 from '../images/person2.png'
 import person3 from '../images/person3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 export default function Testimonial1() {
+
+  useEffect(()=>{
+
+    Aos.init();
+ },[]);
+
+
   return (
-    <div className='relative my-32 mx-28'>
+    <div className='relative my-32 mx-28' data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
+    data-aos-easing="ease-in-sine">
+
+    <div className='my-10 flex justify-center'>
+    <h1 className='text-3xl font-Poppins font-bold underline underline-offset-8 decoration-4 decoration-violet-500'>Testimonials</h1>
+    </div>
+
+
       <div className='flex flex-row justify-center space-x-20'>
        <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
         <div className='flex justify-center h-16 overflow-hidden rounded-full'>

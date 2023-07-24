@@ -5,6 +5,10 @@ import img3 from '../images/dmart.png';
 import img4 from '../images/ginijony.jpeg'
 import {BiSolidLeftArrow} from 'react-icons/bi'
 import {BiSolidRightArrow} from 'react-icons/bi';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 export default function OurClients() {
   const [activeCard, setActiveCard] = useState(0);
@@ -44,12 +48,19 @@ export default function OurClients() {
 
   const visibleCards = getVisibleCards();
 
+
+  useEffect(()=>{
+
+    Aos.init();
+ },[]);
+
   return (
-    <div className='relative'>
+    <div className='relative' data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
+    data-aos-easing="ease-in-sine">
       <div className='flex flex-col mt-10 gap-y-7'>
         {/* heading */}
          <div className='text-center'>
-          <h1 className='font-bold lg:text-2xl xl:text-3xl'>Our Clients</h1>
+          <h1 className='font-bold lg:text-2xl xl:text-3xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our Clients</h1>
          </div>
 
         {/* row sliding */}

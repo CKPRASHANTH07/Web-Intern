@@ -7,7 +7,30 @@ export default function Login() {
 
 
   const [email, setemail] = useState("");
-  const [phnumber, setphnumber] = useState("");
+  const [password, setphnumber] = useState("");
+  const [Error, setError] = useState('')
+
+  async function Login(){
+    const response = await fetch("http://18.234.190.228:8080/login",{
+      method:'POST',
+      headers : {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify({email, password})
+    })
+    const data = await response.json()
+    if(data.status){
+      localStorage.setItem('Token', data.access_token)
+      if (data.role === "admin"){
+        window.location.href = "/Admin"
+      } else if (data.role === "salesperson"){
+        window.location.href = "/Sales"
+      }
+    } else{
+      setError(data.msg)
+      alert(Error)
+    }
+  }
 
 
 
@@ -48,13 +71,13 @@ export default function Login() {
           placeholder="Password"
           className="px-3 py-3 font-semibold border-2 border-gray-500 rounded-lg sm:text-base lg:text-xl xl:text-2xl"
           type="password"
-          value={phnumber}
+          value={password}
           onChange={(event) => {
             setphnumber(event.target.value);
           }}
         />
         <div className='flex justify-center mt-5'>
-        <button type="button" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 px-3 shadow-lg py-1.5 rounded-lg bg-violet-500">
+        <button onClick={()=>Login()} type="button" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 px-3 shadow-lg py-1.5 rounded-lg bg-violet-500">
          <p className='font-bold tracking-wider text-white font-Inter'> Enter </p>
         </button>
         </div>

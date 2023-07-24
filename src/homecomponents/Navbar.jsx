@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintRoller, faQrcode, faTags } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+
+
 export default function Navbar(){
    
     const [Shownavbar,setnavbar]=useState(false)

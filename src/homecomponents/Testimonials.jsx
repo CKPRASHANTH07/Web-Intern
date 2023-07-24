@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 export default function Testimonials() {
   const [count, setCount] = useState([0, 0, 0]);
@@ -22,10 +26,17 @@ export default function Testimonials() {
     return () => clearTimeout(timeout);
   }, [count, targetValue]);
 
+
+  useEffect(()=>{
+
+    Aos.init();
+ },[]);
+
   return (
-    <div className='relative'>
+    <div className='relative' data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
+    data-aos-easing="ease-in-sine">
     <div className='my-10 flex justify-center'>
-    <h1 className='text-3xl font-Poppins font-bold underline underline-offset-8 decoration-4 decoration-violet-500'>Stat</h1>
+    <h1 className='text-3xl font-Poppins font-bold underline underline-offset-8 decoration-4 decoration-violet-500'>Stats</h1>
     </div>
       <div className='flex flex-row justify-center space-x-36'>
         {count.map((value, index) => (

@@ -7,7 +7,7 @@ export default function Whyus() {
   return (
     <div className='relative'>
       <div className='flex justify-start my-10 mx-28'>
-        <h1 className='font-bold lg:text-3xl xl:text-5xl font-Poppins'>Why us ?</h1>
+        <h1 className='font-bold lg:text-3xl xl:text-5xl font-Poppins underline underline-offset-8 decoration-4 decoration-violet-500'>Why us ?</h1>
       </div>
       <div className='grid grid-cols-2 grid-rows-2 mx-28 gap-x-0 gap-y-10'>
         {/*Feature1 */}

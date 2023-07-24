@@ -4,7 +4,7 @@ export default function Ourteam() {
   return (
     <div className='relative'>
     <div className='flex justify-start mx-20'>
-      <h1 className='font-bold font-Poppins lg:text-2xl xl:text-5xl'>Our team</h1>
+      <h1 className='font-bold font-Poppins lg:text-2xl xl:text-5xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our team</h1>
     </div>
     <div className='mx-20 my-20 shadow-lg '>
       <iframe

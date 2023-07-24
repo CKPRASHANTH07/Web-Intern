@@ -1,11 +1,23 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 export default function Oursuppliers() {
+
+  useEffect(()=>{
+
+    Aos.init();
+ },[]);
+
+
+
   return (
-    <div className='relative'>
+    <div className='relative' data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
+    data-aos-easing="ease-in-sine">
     {/*Heading*/}
       <div className='flex justify-center mt-20 mb-14'>
-         <h1 className='font-bold font-Poppins lg:text-2xl'>Our Suppliers</h1>
+         <h1 className='font-bold font-Poppins lg:text-2xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our Suppliers</h1>
       </div>
       {/*content*/}
       <div className='flex flex-row justify-center'>
