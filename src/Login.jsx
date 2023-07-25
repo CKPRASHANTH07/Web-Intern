@@ -11,7 +11,7 @@ export default function Login() {
   const [Error, setError] = useState('')
 
   async function Login(){
-    const response = await fetch("http://18.234.190.228:8080/login",{
+    const response = await fetch("https://18.234.190.228:8080/login",{
       method:'POST',
       headers : {
         "Content-Type" : "application/json"

@@ -18,7 +18,7 @@ export default function Enquiryform() {
       const fetchData = async () => {
         try {
           const token = localStorage.getItem('Token')
-          const response = await fetch('http://18.234.190.228:8080/enquiry_form',{
+          const response = await fetch('https://18.234.190.228:8080/enquiry_form',{
             method:"GET",
             headers : {
               'Authorization': `Bearer ${token}`,
