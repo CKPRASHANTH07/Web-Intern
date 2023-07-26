@@ -38,7 +38,7 @@ export default function Contactform() {
     event.preventDefault();
     // " 54.173.211.48"
      try{
-      const response = await fetch('http://localhost:8080/enquiry_form',{
+      const response = await fetch('https://3.88.43.55:8080/enquiry_form',{
         method : "POST",
         headers : {'Content-Type': 'application/json'},
         body : JSON.stringify({ CompanyName, ApplicationName, Email, ProductName, Quantity, CountryCode, PhoneNumber, Message})
