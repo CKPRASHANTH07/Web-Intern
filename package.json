@@ -1,8 +1,10 @@
 {
   "name": "pm",
+  "homepage": "https://printmajesty.in",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -12,7 +14,10 @@
     "@testing-library/react": "^13.4.0",
     "aos": "^2.3.4",
     "chart.js": "^4.3.0",
+    "country-list": "^2.3.0",
+    "country-phonecode-flag": "^1.0.1",
     "gsap": "^3.12.2",
+    "pocketbase": "^0.15.3",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
@@ -20,6 +25,7 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "react-type-animation": "^3.1.0",
+    "smtpjs": "^0.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

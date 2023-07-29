@@ -9,11 +9,15 @@ export default function Navbar(){
 
     return (
 
-      <div className='xl:h-[100px] lg:h-[55px] w-full px-2 py-3 flex justify-around overflow-hidden'>
-        <div className='flex w-fit place-items-center'>
-         <img className='lg:h-[45px] xl:h-[65px] scale-100' src={logo} alt=''/>
-        </div>
-        <div className="flex space-x-20 font-bold place-items-center text-grey">
+      <div className='xl:h-[100px] lg:h-[55px] md:h-[35px] sm:[25px] w-full px-2 py-3 flex justify-around overflow-hidden'>
+      
+        {/* Logo */}
+         <div className='flex w-fit place-items-center'>
+             <img className='lg:h-[45px] xl:h-[65px] md:h-[25px] sm:[15px]' src={logo} alt=''/>
+         </div>
+
+         {/* Navigation buttons */}
+        <div className="flex font-bold gap-x-20 place-items-center text-grey">
         <Link to="/">
         <button className="font-extrabold h-fit font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Home</button>
         </Link>

@@ -22,7 +22,7 @@ data-aos-easing="ease-in-sine">
     Companies Trust us
   </h2>
 
-  <div class="grid mx-20 items-center gap-6 md:grid-cols-2 lg:grid-cols-4">
+  <div class="grid lg:mx-20 xl:mx-20 sm:mx-0 items-center gap-6 md:grid-cols-2 lg:grid-cols-4">
     <div class="mb-12 lg:mb-0">
       <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/landing-page/2.png"
         class="px-16 md:px-12" alt="Nasa - logo" />

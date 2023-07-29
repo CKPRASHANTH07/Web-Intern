@@ -35,12 +35,12 @@ export default function Testimonials() {
   return (
     <div className='relative' data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
     data-aos-easing="ease-in-sine">
-    <div className='my-10 flex justify-center'>
-    <h1 className='text-3xl font-Poppins font-bold underline underline-offset-8 decoration-4 decoration-violet-500'>Stats</h1>
-    </div>
-      <div className='flex flex-row justify-center space-x-36'>
+          <div className='flex justify-center my-10'>
+              <h1 className='text-3xl font-bold underline font-Poppins underline-offset-8 decoration-4 decoration-violet-500'>Stats</h1>
+          </div>
+      <div className='flex flex-row justify-center lg:gap-x-36 xl:gap-x-36 sm:gap-x-5'>
         {count.map((value, index) => (
-            <div className='flex flex-col space-y-10'>
+            <div className='flex flex-col gap-y-10'>
              <div className='flex justify-center '>
              <div key={index} className='px-1 py-10 rounded-full bg-violet-500 w-fit'>
               <div className='text-center w-28'>

@@ -5,13 +5,15 @@ import perfect from '../images/Perfection.png'
 import durability from '../images/durability.png'
 export default function Whyus() {
   return (
-    <div className='relative'>
-      <div className='flex justify-start my-10 mx-28'>
-        <h1 className='font-bold lg:text-3xl xl:text-5xl font-Poppins underline underline-offset-8 decoration-4 decoration-violet-500'>Why us ?</h1>
+    <div className='relative'  data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
+      <div className='flex my-10 lg:justify-start xl:justify-start sm:justify-center lg:mx-28 xl:mx-28 sm:mx-0'>
+        <h1 className='font-bold underline lg:text-3xl xl:text-5xl lg:text-start xl:text-start sm:text-center font-Poppins underline-offset-8 decoration-4 decoration-violet-500'>Why us ?</h1>
       </div>
-      <div className='grid grid-cols-2 grid-rows-2 mx-28 gap-x-0 gap-y-10'>
+      <div className='grid lg:grid-cols-2 xl:grid-cols-2 sm:grid-cols-1 lg:grid-rows-2 xl:grid-rows-2 lg:mx-28 xl:mx-28 sm:mx-10 gap-x-0 gap-y-10'>
         {/*Feature1 */}
-        <div className='flex flex-col gap-y-3'>
+        <div className='flex flex-col gap-y-3'  data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="350"
+        data-aos-easing="ease-in-sine">
             {/*Image */}
             <div className='w-64 h-64'>
                 <img src={deliver} alt=''/>
@@ -26,7 +28,8 @@ export default function Whyus() {
             </div>
             </div>
         {/*Feature2 */}
-        <div className='flex flex-col gap-y-3'>
+        <div className='flex flex-col gap-y-3'  data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="400"
+        data-aos-easing="ease-in-sine">
             {/*Image */}
             <div className='w-64 h-64'>
                 <img src={trust} alt=''/>
@@ -41,7 +44,8 @@ export default function Whyus() {
             </div>
         </div>
         {/*Feature3 */}
-        <div className='flex flex-col gap-y-3'>
+        <div className='flex flex-col gap-y-3'  data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
             {/*Image */}
             <div className='w-64 h-64'>
                 <img src={perfect} alt=''/>
@@ -56,7 +60,8 @@ export default function Whyus() {
             </div>
         </div>
         {/*Feature4 */}
-        <div className='flex flex-col gap-y-3'>
+        <div className='flex flex-col gap-y-3'  data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="350"
+        data-aos-easing="ease-in-sine">
             {/*Image */}
             <div className='w-64 h-64'>
                 <img src={durability} alt=''/>

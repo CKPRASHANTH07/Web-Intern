@@ -1,15 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
 import bpo from '../images/bpo.jpg'
-
+import emailjs from '@emailjs/browser'
 import { Switch } from '@headlessui/react'
+import {FaCheckCircle} from 'react-icons/fa'
+import {FaRegTimesCircle} from 'react-icons/fa'
+import countriesData from 'country-list';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
+const countries = countriesData.getData();
+
 export default function Contactform() {
 
   const [agreed, setAgreed] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
 
   const [CompanyName, setCompanyName] = useState('');
   const [ApplicationName, setApplicationName] = useState('');
@@ -20,43 +27,53 @@ export default function Contactform() {
   const [PhoneNumber, setPhoneNumber] = useState();
   const [Message, setMessage] = useState('');
 
-  const [data, setdata] = useState('');
+  const [Alert, setAlert] = useState(null)
 
-  function ResetForm(){
+  const handleSubmit= (event) => {
+    event.preventDefault();
+
+    // Your EmailJS service and template IDs
+    const customerTemplateId = 'template_zx4o0tb';
+
+    // Send the acknowledgment email to the customer
+    emailjs.send('service_de4keik', customerTemplateId, {
+      user_name: ApplicationName,
+      to_mail:Email,
+    }, 'ZTic5LurSD4Uvq3q_')
+    .then((response) => {
+      console.log('Customer acknowledgment email sent!', response);
+      resetform();
+      setAlert('Contact details sent Successully check your mail')
+      setIsSuccess(true)
+      setTimeout(() => {
+        setAlert(null);
+      },7000);
+    })
+    .catch((error) => {
+      setAlert('Failed to send check your credentials', error);
+      setIsSuccess(false)
+      setTimeout(()=>{
+        setAlert(null);
+      },7000);
+    });
+  }
+
+  function resetform(){
+    setAgreed(false);
+    setApplicationName('');
     setCompanyName('')
-    setApplicationName('')
+    setCountryCode('us')
     setEmail('')
+    setMessage('')
+    setPhoneNumber('')
     setProductName('')
     setQuantity('')
-    setCountryCode('US')
-    setPhoneNumber('')
-    setMessage('')
-    setAgreed(false);
   }
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-    // " 54.173.211.48"
-     try{
-      const response = await fetch('https://3.88.43.55:8080/enquiry_form',{
-        method : "POST",
-        headers : {'Content-Type': 'application/json'},
-        body : JSON.stringify({ CompanyName, ApplicationName, Email, ProductName, Quantity, CountryCode, PhoneNumber, Message})
-      })
-      const data = await response.json();
-      setdata(data.status)
-      ResetForm();
-     }
-     catch(error){
-      alert("Backend Error")
-     }
-  }
-
 
   return (
     <div className='relative'>
-    <div className='flex justify-around mx-10'>
-    <div className='mx-20'>
+    <div className='mx-10 lg:flex xl:flex lg:justify-around xl:justify-around'>
+    <div className='lg:mx-20 xl:mx-20'>
       <div className="mx-auto mt-10 text-center max-w-2x">
         <h1 className="text-xl text-transparent underline underline-offset-8 decoration-violet-500 decoration-4 font-Poppins bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text sm:text-4xl">Contact sales</h1>
       </div>
@@ -81,7 +98,7 @@ export default function Contactform() {
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="company" className="block text-lg font-bold leading-6 text-gray-900 font-Inter">
-            Application Name
+            Applicant Name
           </label>
           <div className="mt-2.5">
             <input
@@ -148,28 +165,28 @@ export default function Contactform() {
           />
         </div>
       </div>
-        <div className="sm:col-span-2">
+          <div className="flex flex-col my-5 gap-y-3">
+          <label htmlFor="country" className="block text-lg font-semibold leading-6 text-gray-900 font-Inter">
+          Country Code
+           </label>
+        <select
+          value={CountryCode}
+          onChange={(e)=>setCountryCode(e.target.value)}
+          id="country"
+          name="country"
+          className="h-full px-2 py-2 font-bold border-2 border-gray-300 rounded-md font-Poppins sm:text-sm"
+          required
+        >
+         {countries.map((country, index) => (
+                 <option key={index} value={country.code}>
+                 {`${country.code} ${country.name}`}
+                </option>))}
+        </select>
+          </div>
+        <div className="flex flex-col min-w-full my-5 gap-y-3">
           <label htmlFor="phone-number" className="block text-lg font-bold leading-6 text-gray-900 font-Inter">
             Phone number
           </label>
-          <div className="relative mt-2.5">
-            <div className="absolute inset-y-0 left-0 flex items-center">
-              <label htmlFor="country" className="sr-only">
-                Country
-              </label>
-              <select
-                value={CountryCode}
-                onChange={(e)=>setCountryCode(e.target.value)}
-                id="country"
-                name="country"
-                className="h-full px-2 py-0 border-2 border-gray-300 rounded-md sm:text-sm"
-                required
-              >
-                <option className='font-bold font-Poppins'>US</option>
-                <option className='font-bold font-Poppins'>CA</option>
-                <option className='font-bold font-Poppins'>EU</option>
-              </select>
-            </div>
             <input
               type='tel'
               value={PhoneNumber}
@@ -182,11 +199,10 @@ export default function Contactform() {
               name="phone-number"
               id="phone-number"
               autoComplete="tel"
-              className=" w-full rounded-md border-2 border-gray-300 px-3.5 py-2 pl-20 font-Inter font-semibold text-gray-900  sm:text-sm sm:leading-6"
+              className=" w-full rounded-md border-2 border-gray-300 px-3.5 py-2 font-Inter font-semibold text-gray-900  sm:text-sm sm:leading-6"
               required
             />
           </div>
-        </div>
         <div className="sm:col-span-2">
           <label htmlFor="message" className="block text-lg font-bold leading-6 text-gray-900 font-Inter">
             Message
@@ -243,7 +259,21 @@ export default function Contactform() {
         </button>
       </div>
     </form>
+
+    {/*  Success message */}
+    {Alert&&(
+      <div className='flex justify-center'>
+     <div className={`place-items-center px-3 gap-x-2 rounded-lg mt-10 flex justify-center py-3 ${isSuccess?'bg-green-300':'bg-red-300'} ${isSuccess?'border-green-600':'border-red-600'} border-2 w-fit`} >
+        <div>
+        {isSuccess?<FaCheckCircle style={{color:'#16A34A'}} size='20px'  />:<FaRegTimesCircle style={{color:'#DC2626'}} size='20px' />}
+        </div>
+       <h1 className={`font-bold ${isSuccess?'text-green-600':'text-red-600'} font-Inter`}>{Alert}</h1>
+     </div>
+     </div>
+     )}
     </div>
+
+
     <div className='flex flex-col max-w-xl pt-10 mx-10 my-10 gap-y-10 max-h-xl'>
     <h1 className='text-2xl text-center font-Poppins'>Our Team will reach you in mins</h1>
      <div className='pt-5'>

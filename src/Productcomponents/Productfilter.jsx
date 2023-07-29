@@ -1,11 +1,10 @@
-import { useState } from "react";
 import React from 'react'
 
-export default function Productfilter() {
-    const [selectedCategory, setSelectedCategory] = useState('');
+export default function Productfilter({selectedCategory, setSelectedCategory}) {
+    // const [selectedCategory, setSelectedCategory] = useState('');
   
     // Define your filter and subfilter options
-    const categories = ['Category1', 'Category2', 'Category3'];
+    const categories = ['Label', 'Plastic', 'Paper'];
   
     // Handle filter selection
     const handleCategoryChange = (event) => {
@@ -26,7 +25,7 @@ export default function Productfilter() {
            onChange={handleCategoryChange}
            className="px-2 py-1 my-5 font-bold border rounded font-Inter"
           >
-           <option value="" className="font-semibold font-Inter">None</option>
+           <option value="" className="font-semibold font-Inter">All</option>
            {categories.map((category, index) => (
              <option key={index} value={category} className="my-10 font-semibold font-Inter">
                {category}

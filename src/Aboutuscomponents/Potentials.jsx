@@ -35,16 +35,17 @@ export default function Potentials() {
 
 
   return (
-    <div className='relative mx-20 my-20'>
+    <div className='relative mx-20 my-20'  data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
+    data-aos-easing="ease-in-sine">
         <div className='flex justify-start mb-20'>
-            <h1 className='font-Poppins lg:text-2xl xl:text-5xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our Potential Infrastructure</h1>
+            <h1 className='underline font-Poppins lg:text-2xl xl:text-5xl underline-offset-8 decoration-4 decoration-violet-500'>Our Potential Infrastructure</h1>
         </div>
        
     {/*details*/}
-    <div className='flex flex-row justify-start my-10 divide-x-4 divide-violet-600'>
+    <div className='justify-start my-10 xl:gap-y-0 lg:gap-y-0 sm:gap-y-5 lg:divide-x-4 xl:divide-x-4 sm:divide-y-4 lg:divide-y-0 xl:divide-y-0 sm:divide-violet-400 lg:flex xl:flex lg:flex-row xl:flex-row sm:flex sm:flex-col divide-violet-600'>
     {count.map((value,index)=>(
         <div className='flex'>
-        <div className='flex flex-col pl-5 gap-y-5'>
+        <div className='flex flex-col pl-5 gap-y-5 '>
           {/*images*/}
           <div className='w-20 h-20'>
            <img src={images[index]} alt=''/>

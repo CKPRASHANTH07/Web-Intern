@@ -60,17 +60,17 @@ export default function OurClients() {
       <div className='flex flex-col mt-10 gap-y-7'>
         {/* heading */}
          <div className='text-center'>
-          <h1 className='font-bold lg:text-2xl xl:text-3xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our Clients</h1>
+          <h1 className='font-bold underline lg:text-2xl xl:text-3xl underline-offset-8 decoration-4 decoration-violet-500'>Our Clients</h1>
          </div>
 
         {/* row sliding */}
-        <div className='flex flex-row justify-center mx-28'>
-          <button className='' onClick={prevCard}><BiSolidLeftArrow size='1.5em' /></button>
+        <div className='lg:flex xl:flex lg:flex-row xl:flex-row sm:flex-col lg:justify-center xl:justify-center lg:mx-28 xl:mx-28 sm:mx-10'>
+          <button className='sm:hidden lg:block xl:block' onClick={prevCard}><BiSolidLeftArrow size='1.5em' /></button>
           {visibleCards.map((card, index) => {
             const isCenterCard = index === 1; // Check if the card is the center card
             const cardClass = isCenterCard
-              ? 'flex flex-col px-8 py-8 lg:w-[35%] xl:w-[30%] rounded-lg shadow-xl border-2 border-black'
-              : 'flex flex-col px-8 py-8 lg:w-[35%] xl:w-[30%] rounded-lg shadow-xl border-2 border-black transform scale-[0.7] translate-y-3';
+              ? 'flex flex-col px-8 py-8 lg:w-[35%] xl:w-[30%] shadow-violet-400 rounded-lg shadow-lg border-2 border-black'
+              : 'flex flex-col px-8 py-8 lg:w-[35%] xl:w-[30%] shadow-violet-400 rounded-lg shadow-lg border-2 border-black transform scale-[0.7] translate-y-3';
 
             return (
               <div key={index} className={cardClass}>
@@ -88,7 +88,7 @@ export default function OurClients() {
               </div>
             );
           })}
-          <button className='' onClick={nextCard}><BiSolidRightArrow size="1.5em" /></button>
+          <button className='sm:hidden lg:block xl:block' onClick={nextCard}><BiSolidRightArrow size="1.5em" /></button>
         </div>
       </div>
     </div>

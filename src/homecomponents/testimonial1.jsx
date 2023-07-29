@@ -21,13 +21,13 @@ export default function Testimonial1() {
     <div className='relative my-32 mx-28' data-aos="fade-up" data-aos-duration="5000"  data-aos-offset="200"
     data-aos-easing="ease-in-sine">
 
-    <div className='my-10 flex justify-center'>
-    <h1 className='text-3xl font-Poppins font-bold underline underline-offset-8 decoration-4 decoration-violet-500'>Testimonials</h1>
+    <div className='flex justify-center my-10'>
+    <h1 className='text-3xl font-bold underline font-Poppins underline-offset-8 decoration-4 decoration-violet-500'>Testimonials</h1>
     </div>
 
 
-      <div className='flex flex-row justify-center space-x-20'>
-       <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
+      <div className='justify-center sm:-ml-10 lg:-ml-0 xl:-ml-0 lg:flex-row xl:flex-row md:flex lg:gap-x-20 xl:gap-x-20 sm:gap-x-0'>
+       <div className='flex flex-col p-5 mt-16 transition duration-300 ease-in-out delay-150 border-2 border-black shadow-lg hover:-translate-y-1 hover:scale-110 h-fit shadow-violet-500 rounded-xl w-fit'>
         <div className='flex justify-center h-16 overflow-hidden rounded-full'>
           <img src={person1} alt='' />
         </div> 
@@ -45,7 +45,7 @@ export default function Testimonial1() {
         </div>
         </div>
        </div>
-       <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col h-auto p-5 border-2 border-black shadow-lg shadow-violet-500 rounded-xl w-fit'>
+       <div className='flex flex-col h-auto p-5 transition duration-300 ease-in-out delay-150 border-2 border-black shadow-lg lg:mt-0 xl:mt-0 sm:mt-10 hover:-translate-y-1 hover:scale-110 shadow-violet-500 rounded-xl w-fit'>
        <div className='flex justify-center overflow-hidden rounded-full'>
          <img src={person2} alt='' />
        </div> 
@@ -63,7 +63,7 @@ export default function Testimonial1() {
        </div>
        </div>
       </div>
-      <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col p-5 mt-16 border-2 border-black shadow-lg h-fit shadow-violet-500 rounded-xl w-fit'>
+      <div className='flex flex-col p-5 mt-16 transition duration-300 ease-in-out delay-150 border-2 border-black shadow-lg hover:-translate-y-1 hover:scale-110 h-fit shadow-violet-500 rounded-xl w-fit'>
         <div className='flex justify-center h-16 overflow-hidden rounded-full'>
           <img src={person3} alt='' />
         </div> 

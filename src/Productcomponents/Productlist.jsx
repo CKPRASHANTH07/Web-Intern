@@ -7,7 +7,7 @@ import hng from '../images/hngtg.png'
 import stckr from '../images/stckr.png'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 
-export default function Productlist() {
+export default function Productlist({selectedCategory}) {
 
   const [selectedProducts, setSelectedProducts] = React.useState([]);
   const [showComparison, setShowComparison] = React.useState(false);
@@ -105,34 +105,41 @@ export default function Productlist() {
   ];
 
 
+
+
   return (
     <div className='relative w-full h-auto'>
-      <div className='grid grid-cols-3 gap-y-16'>
-         {products.map((product, index) => (
-         <div key={index} className='flex flex-col px-2 py-3 mb-5 border-2 rounded-lg shadow-xl w-fit gap-y-5 shadow-violet-300'>
-         <div className='overflow-hidden bg-gray-200 rounded-lg h-52 w-52'>
-           <img src={product.imageUrl} alt={product.name}/>
-         </div>
-         <div  className='flex justify-center p-2'>
-           <h1 className='font-semibold font-Poppins w-fit'>{product.name}</h1>
-         </div>
-         <div className='flex justify-between mx-3'>
-           <h1 className='font-semibold text-orange-400 font-Inter w-fit'>{product.type}</h1>
-           <h1 className='font-semibold text-gray-600 font-Inter w-fit'>{product.finish}</h1>
-         </div>
-         <div className='flex flex-col space-y-3'>
-          <button onClick={()=>toggleCompare(product)}>
-            <div className='flex justify-center w-full py-1 rounded-md bg-violet-500'>
-              <h1 className='font-bold text-white font-Inter'>Compare</h1>
+      <div className='grid lg:grid-cols-3 xl:grid-cols-3 sm:grid-cols-1 gap-y-16'>
+      {products.map((product) =>
+        product.type.includes(selectedCategory)? 
+        (
+          <div key={product.name} className='flex flex-col px-2 py-3 mb-5 border-2 rounded-lg shadow-xl w-fit gap-y-5 shadow-violet-300'>
+            <div className='overflow-hidden bg-gray-200 rounded-lg h-52 w-52'>
+              <img src={product.imageUrl} alt={product.name} />
             </div>
-          </button>
-          <button onClick={() => toggleProductDetails(product)}>
-             <div className='flex justify-center w-full py-1 rounded-md bg-violet-500'>
-               <h1 className='font-bold text-white font-Inter'>More info</h1>
-             </div>
-          </button>
-         </div>
-         </div>))}
+            <div className='flex justify-center p-2'>
+              <h1 className='font-semibold font-Poppins w-fit'>{product.name}</h1>
+            </div>
+            <div className='flex justify-between mx-3'>
+              <h1 className='font-semibold text-orange-400 font-Inter w-fit'>{product.type}</h1>
+              <h1 className='font-semibold text-gray-600 font-Inter w-fit'>{product.finish}</h1>
+            </div>
+            <div className='flex flex-col space-y-3'>
+              <button onClick={() => toggleCompare(product)}>
+                <div className='flex justify-center w-full py-1 rounded-md bg-violet-500'>
+                  <h1 className='font-bold text-white font-Inter'>Compare</h1>
+                </div>
+              </button>
+              <button onClick={() => toggleProductDetails(product)}>
+                <div className='flex justify-center w-full py-1 rounded-md bg-violet-500'>
+                  <h1 className='font-bold text-white font-Inter'>More info</h1>
+                </div>
+              </button>
+            </div>
+          </div>
+        )
+         : null
+      )}
       </div>
            
       {showProductDetails && (

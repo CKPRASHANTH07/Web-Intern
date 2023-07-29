@@ -8,31 +8,31 @@ import {MdEmail} from 'react-icons/md'
 import {TbDeviceLandlinePhone} from 'react-icons/tb'
 export default function Footer() {
   return (
-    <div className='relative '>
-    <div className='flex-col justify-center'>
+    <div className='relative'>
+     <div className='flex-col justify-center'>
       <div className='flex justify-center space-x-3 place-items-center'>
-       <FaCopyright style={{color:"#8b5cf6"}} size={30}/>
-       <h1 className='text-xl font-Poppins text-violet-500'>All Rights Reserved</h1>
+        <FaCopyright style={{color:"#8b5cf6"}} size={30}/>
+        <h1 className='text-xl font-Poppins text-violet-500'>All Rights Reserved</h1>
       </div>
       <div className='flex justify-center w-full'>
-      <div className='flex flex-row space-x-32'>
+      <div className='flex lg:flex-row xl:flex-row sm:flex-col gap-x-32'>
         <div className='flex flex-col space-y-5 mt-7 mb-7 '>
           <h1 className='font-Poppins text-violet-500'>Follow us on</h1>
         <div className='flex flex-row space-x-3 place-items-center'>
          <BsFacebook style={{color:"#8b5cf6"}}/>
-         <h1 className='font-bold font-Inter'>Facebook</h1>
+         <h1 className='font-bold font-Poppins'>Facebook</h1>
         </div>
         <div className='flex flex-row space-x-3 place-items-center'>
          <BsTwitter style={{color:"#8b5cf6"}}/>
-         <h1 className='font-bold font-Inter'>Twitter</h1>
+         <h1 className='font-bold font-Poppins'>Twitter</h1>
         </div>
         <div className='flex flex-row space-x-3 place-items-center'>
          <BsInstagram style={{color:"#8b5cf6"}}/>
-         <h1 className='font-bold font-Inter'>Instagram</h1>
+         <h1 className='font-bold font-Poppins'>Instagram</h1>
         </div>
         <div className='flex flex-row space-x-3 place-items-center'>
          <BsYoutube style={{color:"#8b5cf6"}}/>
-         <h1 className='font-bold font-Inter'>Youtube</h1>
+         <h1 className='font-bold font-Poppins'>Youtube</h1>
         </div>
       </div>
       <div className='flex flex-col space-y-5 mt-7 mb-7'>

@@ -17,15 +17,15 @@ export default function Oursuppliers() {
     data-aos-easing="ease-in-sine">
     {/*Heading*/}
       <div className='flex justify-center mt-20 mb-14'>
-         <h1 className='font-bold font-Poppins lg:text-2xl underline underline-offset-8 decoration-4 decoration-violet-500'>Our Suppliers</h1>
+         <h1 className='font-bold underline font-Poppins lg:text-2xl underline-offset-8 decoration-4 decoration-violet-500'>Our Suppliers</h1>
       </div>
       {/*content*/}
       <div className='flex flex-row justify-center'>
-      <div className='grid grid-cols-3 mx-10 gap-x-20'>
+      <div className='lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-3 sm:grid sm:grid-cols-1 lg:mx-10 xl:mx-10 lg:gap-x-20 xl:gap-x-20 sm:gap-y-10'>
       {/*1st coloumn*/}
-      <div className='flex flex-col gap-y-5 '>
+      <div className='flex flex-col gap-y-5'>
        {/*1st div*/}
-         <div className='flex border-2 border-black rounded-lg'>
+         <div className='flex border-2 border-black rounded-lg shadow-lg shadow-violet-400'>
            {/*image1*/}
              <div className='w-20 h-20'>
                <img src='' alt=''/>
@@ -37,7 +37,7 @@ export default function Oursuppliers() {
              </div>
          </div>
        {/*2nd div*/}
-         <div className='flex border-2 border-black rounded-lg'>
+         <div className='flex border-2 border-black rounded-lg shadow-lg shadow-violet-400'>
            {/*image1*/}
              <div className='w-20 h-20'>
                <img src='' alt=''/>
@@ -52,7 +52,7 @@ export default function Oursuppliers() {
       {/*2nd coloumn*/}
       <div className='flex flex-col gap-y-5 '>
        {/*1st div*/}
-         <div className='flex border-2 border-black rounded-lg'>
+         <div className='flex border-2 border-black rounded-lg shadow-lg shadow-violet-400'>
            {/*image1*/}
              <div className='w-20 h-20'>
                <img src='' alt=''/>
@@ -64,7 +64,7 @@ export default function Oursuppliers() {
              </div>
          </div>
        {/*2nd div*/}
-         <div className='flex border-2 border-black rounded-lg'>
+         <div className='flex border-2 border-black rounded-lg shadow-lg shadow-violet-400'>
            {/*image1*/}
              <div className='w-20 h-20'>
                <img src='' alt=''/>
@@ -76,7 +76,7 @@ export default function Oursuppliers() {
              </div>
          </div>
            {/*3rd div*/}
-           <div className='flex border-2 border-black rounded-lg'>
+           <div className='flex border-2 border-black rounded-lg shadow-lg shadow-violet-400'>
            {/*image1*/}
              <div className='w-20 h-20'>
                <img src='' alt=''/>
@@ -91,7 +91,7 @@ export default function Oursuppliers() {
       {/*3rd coloumn*/}
       <div className='flex flex-col gap-y-5 '>
       {/*1st div*/}
-        <div className='flex border-2 border-black rounded-lg'>
+        <div className='flex border-2 border-black rounded-lg shadow-lg shadow-violet-400'>
           {/*image1*/}
             <div className='w-20 h-20'>
               <img src='' alt=''/>

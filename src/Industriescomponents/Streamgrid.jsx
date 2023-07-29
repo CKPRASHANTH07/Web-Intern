@@ -18,85 +18,85 @@ export default function Streamgrid() {
   return (
     <div className='relative mt-10'>
       <div className='flex justify-start mx-20'>
-        <h1 className='text-xl text-transparent bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text font-bold font-Poppins'>Explore your Way</h1>
+        <h1 className='text-xl font-bold text-transparent bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text font-Poppins'>Explore your Way</h1>
       </div>
       {/* Stream grid */}
-      <div className='grid grid-cols-3 mx-20 my-10 gap-y-7 gap-x-7 '>
+      <div className='my-10 lg:mx-20 xl:mx-20 sm:mx-5 lg:grid xl:grid lg:grid-cols-3 xl:grid-cols-3 sm:grid sm:grid-cols-1 gap-y-7 gap-x-7 '>
              <Link to='/Industries/Shipping'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-               <p className='font-Inter text-lg font-bold'>Shipping and Logistics Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+               <p className='text-lg font-bold font-Inter'>Shipping and Logistics Labels</p>
                <LiaShippingFastSolid size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Inventory'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Inventory Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Inventory Labels</p>
              <MdOutlineInventory size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Product'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Product Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Product Labels</p>
              <BiSolidBox size='40px' style={{color:'#8B5CF6'}} />
              </div>
              </Link>
              <Link to='/Industries/Barcode'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Barcode Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Barcode Labels</p>
              <BiBarcodeReader size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Foodandbeverage'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Food and Beverage Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Food and Beverage Labels</p>
              <IoFastFood   size="40px" style={{ color: '#8B5CF6' }}  />
              </div>
              </Link>
              <Link to='/Industries/Pharmaceutical'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Pharmaceutical Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Pharmaceutical Labels</p>
              <GiMedicines  size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Retail'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Retail Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Retail Labels</p>
              <BiSolidShoppingBags size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Electronic'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Electronic Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Electronic Labels</p>
              <FaMicrochip  size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Security'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Security Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Security Labels</p>
              <MdOutlineSecurity size="40px" style={{ color: '#8B5CF6' }}  />
              </div>
              </Link>
              <Link to='/Industries/Warehouse'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Warehouse Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Warehouse Labels</p>
              <LuWarehouse size="40px" style={{ color: '#8B5CF6' }} />
              </div>
              </Link>
              <Link to='/Industries/Compliance'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Compliance Label</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Compliance Label</p>
              <MdFeedback size='40px' style={{color:'#8B5CF6'}} />
              </div> 
              </Link>
              <Link to='/Industries/Safety'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Safety Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Safety Labels</p>
              <RiSafe2Line size='40px' style={{color:'#8B5CF6'}} />
              </div> 
              </Link>
              <Link to='/Industries/Custom'>
-             <div className='max-w-xl px-3 py-5 border-2 border-black rounded-lg flex flex-row justify-between pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 gap-x-5 place-items-center shadow-lg'>
-             <p className='font-Inter text-lg font-bold'>Custom Labels</p>
+             <div className='flex flex-row justify-between max-w-xl px-3 py-5 pr-10 transition duration-300 ease-in-out delay-150 border-2 border-black rounded-lg shadow-lg hover:-translate-y-1 hover:scale-110 gap-x-5 place-items-center'>
+             <p className='text-lg font-bold font-Inter'>Custom Labels</p>
              <TiSpanner size='40px' style={{color:'#8B5CF6'}} />
              </div>
              </Link>
