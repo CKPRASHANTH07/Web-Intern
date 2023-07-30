@@ -1,57 +1,83 @@
-import React, { useState } from 'react'
-import logo from '../images/logo.png'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { HiMenu } from 'react-icons/hi';
+import { FaCross } from 'react-icons/fa';
+import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
+export default function Navbar() {
+  const [nav, setNav] = useState(false);
 
-export default function Navbar(){
-   
-    const [Shownavbar,setnavbar]=useState(false)
+  const handleClick = () => setNav(!nav);
 
-    return (
-
-      <div className='xl:h-[100px] lg:h-[55px] md:h-[35px] sm:[25px] w-full px-2 py-3 flex justify-around overflow-hidden'>
-      
-        {/* Logo */}
-         <div className='flex w-fit place-items-center'>
-             <img className='lg:h-[45px] xl:h-[65px] md:h-[25px] sm:[15px]' src={logo} alt=''/>
-         </div>
-
-         {/* Navigation buttons */}
-        <div className="flex font-bold gap-x-20 place-items-center text-grey">
-        <Link to="/">
-        <button className="font-extrabold h-fit font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Home</button>
-        </Link>
-        <Link to="/Products">
-        <button className="flex flex-row font-extrabold place-items-center font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500" onClick={()=>setnavbar(!Shownavbar)}>
-        <p className='font-extrabold font-Inter'>Products</p>
-        </button>
-        </Link>
-        <Link to="/Industries">
-        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Industries</button>
-        </Link>
-        <Link to="/ClientPortfolio">
-        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Client Portfolio</button>
-        </Link>
-        <Link to="/Aboutus">
-        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">About-us</button>
-        </Link>
-        <Link to="/Contactus">
-        <button className="font-extrabold font-Inter hover:underline underline-offset-8 decoration-4 decoration-violet-500">Contact-us</button>
-        </Link>
+  return (
+    <div className='relative z-10'>
+      <div className='fixed w-full h-24 flex justify-between items-center px-4 py-0 bg-white text-black text-2xl'>
+        <div className='flex ml-5 place-items-end'>
+          <img className='object scale-50' src={logo} alt='' />
         </div>
-   {/*
-         <div className={`${Shownavbar?'block':'hidden'} flex flex-col  lg:top-20 xl:top-36 lg:left-[20%] xl:left-[49%] rounded-lg p-2 space-y-6`}>
-        <div className='px-3 py-2 rounded-md'>
-       <FontAwesomeIcon icon={faQrcode} size='xl' /> 
-      </div>
-      <div className='px-3 py-2 rounded-md'>
-      <FontAwesomeIcon icon={faTags} size='xl' /> 
-      </div>
-      <div className='px-3 py-2 rounded-md'>
-      <FontAwesomeIcon  icon={faPaintRoller} size='xl'/>
-      </div>
-    </div> */}
-      </div>
-    )
-}
+        <ul className='hidden md:flex gap-x-10 mr-10 dynamic'>
+          <li className='group relative cursor-pointer'>
+            <Link to="/" className='hover:text-violet-500 font-poppins text-lg'>Home--</Link>
+            <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+          </li>
+          <li className='group relative cursor-pointer'>
+            <Link to="/products" className='hover:text-violet-500 font-poppins text-lg'>Products</Link>
+            <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+          </li>
+          <li className='group relative cursor-pointer'>
+            <Link to="/industries" className='hover:text-violet-500 font-poppins text-lg'>Industries</Link>
+            <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+          </li>
+          <li className='group relative cursor-pointer'>
+            <Link to="/Clientportfolio" className='hover:text-violet-500 font-poppins text-lg'>Client Portfolio</Link>
+            <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+          </li>
+          <li className='group relative cursor-pointer'>
+            <Link to="/Aboutus" className='hover:text-violet-500 font-poppins text-lg'>About Us</Link>
+            <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+          </li>
+          <li className='group relative cursor-pointer'>
+            <Link to="/Contactus" className='hover:text-violet-500 font-poppins text-lg'>Contact Us</Link>
+            <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+          </li>
+        </ul>
 
+        <div className='md:hidden text-2xl'>
+        <button onClick={handleClick}>
+    {nav ? <FaCross /> : <HiMenu />}
+  </button>
+          {nav && (
+            <div className='fixed top-30 right-0 w-56 h-64 rounded-xl bg-gray-500 flex flex-col justify-center items-center'>
+              <ul>
+                 <li className='group relative cursor-pointer'>
+                  <Link to="/" className='hover:text-violet-500 font-poppins text-lg'>Home</Link>
+                  <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+                </li>
+                <li className='group relative cursor-pointer'>
+                  <Link to="/products" className='hover:text-violet-500 font-poppins text-lg'>Products</Link>
+                  <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+                </li>
+                <li className='group relative cursor-pointer'>
+                  <Link to="/Industries" className='hover:text-violet-500 font-poppins text-lg'>Industries</Link>
+                  <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+                </li>
+                <li className='group relative cursor-pointer'>
+                  <Link to="/Clientportfolio" className='hover:text-violet-500 font-poppins text-lg'>Client Portfolio</Link>
+                  <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+                </li>
+                <li className='group relative cursor-pointer'>
+                  <Link to="/Aboutus" className='hover:text-violet-500 font-poppins text-lg'>About Us</Link>
+                  <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+                </li>
+                <li className='group relative cursor-pointer'>
+                  <Link to="/Contactus" className='hover:text-violet-500 font-poppins text-lg'>Contact Us</Link>
+                  <span className='absolute -bottom-1 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 transition-transform duration-700 group-hover:scale-x-100'></span>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
