@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { HiX } from 'react-icons/hi';
 import { HiMenu } from 'react-icons/hi';
-import { FaCross } from 'react-icons/fa';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +8,7 @@ export default function Navbar() {
   const [nav, setNav] = useState(false);
 
   const handleClick = () => setNav(!nav);
+  
 
   return (
     <div className='relative z-10'>
@@ -44,7 +45,7 @@ export default function Navbar() {
 
         <div className='md:hidden text-2xl'>
         <button onClick={handleClick}>
-    {nav ? <FaCross /> : <HiMenu />}
+    {nav ? <HiX /> : <HiMenu />}
   </button>
           {nav && (
             <div className='fixed top-30 right-0 w-56 h-64 rounded-xl bg-white flex flex-col justify-center items-center'>
