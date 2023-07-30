@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div className='relative z-10'>
-      <div className='fixed w-full h-24 flex justify-between items-center px-4 py-0 bg-white text-black text-2xl'>
+      <div className='fixed w-full h-12 flex justify-between items-center px-4 py-0 bg-white text-black text-2xl'>
         <div className='flex ml-5 place-items-end'>
           <img className='object scale-50' src={logo} alt='' />
         </div>
