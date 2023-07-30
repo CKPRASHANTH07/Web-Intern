@@ -47,7 +47,7 @@ export default function Navbar() {
     {nav ? <FaCross /> : <HiMenu />}
   </button>
           {nav && (
-            <div className='fixed top-30 right-0 w-56 h-64 rounded-xl bg-gray-500 flex flex-col justify-center items-center'>
+            <div className='fixed top-30 right-0 w-56 h-64 rounded-xl bg-white flex flex-col justify-center items-center'>
               <ul>
                  <li className='group relative cursor-pointer'>
                   <Link to="/" className='hover:text-violet-500 font-poppins text-lg'>Home</Link>
