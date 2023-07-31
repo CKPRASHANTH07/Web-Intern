@@ -12,7 +12,7 @@ export default function Productindi() {
 
   return (
     <div>
-      <div className=''>
+      <div className='flex flex-col gap-10'>
       <Navbar/>
       <Producthero/>
       <div className='mx-10 mt-16 lg:flex xl:flex lg:flex-row xl:flex-row sm:flex sm:flex-col gap-x-10'>
