@@ -4,7 +4,7 @@ import Streamgrid from './Industriescomponents/Streamgrid'
 import Footer from './homecomponents/footer'
 export default function Industries() {
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
       <Navbar/>
       <Streamgrid/>
       <Footer/>
