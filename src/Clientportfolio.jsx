@@ -6,7 +6,7 @@ import Footer from './homecomponents/footer'
 
 export default function Clientportfolio() {
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
       <Navbar/>
       <Ourclientss />
       <Oursuppliers />
