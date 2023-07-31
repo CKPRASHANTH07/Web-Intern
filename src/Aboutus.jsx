@@ -10,7 +10,7 @@ import Ourteam from './Aboutuscomponents/Ourteam'
 
 export default function Aboutus() {
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
       <Navbar/>
       <div className='relative'>
       <Aboutushero />
